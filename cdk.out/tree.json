@@ -1,0 +1,37 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "Stack-aws-s3": {
+        "id": "Stack-aws-s3",
+        "path": "Stack-aws-s3",
+        "children": {
+          "NewBucket": {
+            "id": "NewBucket",
+            "path": "Stack-aws-s3/NewBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Stack-aws-s3/NewBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "Stack-aws-s3/NewBucket/Notifications"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
