@@ -1,4 +1,5 @@
 using Amazon.CDK;
+
 namespace CdkWorkshop
 {
     sealed class Program
@@ -9,7 +10,7 @@ namespace CdkWorkshop
             var envAny = Helper.makeEnv(account: "", region: "");
 
             var app = new App();
-            new CdkWorkshopStack(app, "Stack-S3", new StackProps { Env = envAny });
+            new CdkWorkshopStack(app, "Stack"+ System.Guid.NewGuid().ToString("n"), new StackProps { Env = envAny });
             app.Synth();
         }
     }
